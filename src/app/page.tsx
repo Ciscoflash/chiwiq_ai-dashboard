@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { LandingHeader } from "@/components/landing/LandingHeader";
 import { LandingFooter } from "@/components/landing/LandingFooter";
+import { HeroCta } from "@/components/landing/HeroCta";
 
 const HERO_VIDEO =
   "https://res.cloudinary.com/dgciuf5do/video/upload/v1772912032/GettyImages-1367618091_1_bgcjbd.mp4";
@@ -209,13 +210,7 @@ export default function LandingPage() {
               We design AI, automation, and robotics systems that help organisations operate
               faster and smarter
             </p>
-            <Link
-              href="/admin/login"
-              className="inline-block rounded-md bg-white px-8 py-3 text-sm font-semibold tracking-[-0.01em] text-black transition-colors duration-200 hover:bg-white/85"
-              style={{ border: "1px solid rgba(255,255,255,0.50)" }}
-            >
-              Book a demo
-            </Link>
+            <HeroCta />
           </div>
         </section>
 
@@ -428,13 +423,6 @@ export default function LandingPage() {
       </main>
 
       <LandingFooter />
-
-      <elevenlabs-convai agent-id="agent_1301m2p162gkfmbbpmnrztzj5ehv"></elevenlabs-convai>
-      <script
-        src="https://unpkg.com/@elevenlabs/convai-widget-embed"
-        async
-        type="text/javascript"
-      ></script>
     </div>
   );
 }
