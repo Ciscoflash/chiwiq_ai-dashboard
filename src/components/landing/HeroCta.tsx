@@ -3,7 +3,7 @@
 import { useRef } from "react";
 import Script from "next/script";
 
-const AGENT_ID = "agent_1301m2p162gkfmbbpmnrztzj5ehv";
+const AGENT_ID =  process.env.NEXT_PUBLIC_AGENT_ID;
 
 export function HeroCta() {
   const convaiRef = useRef<HTMLElement | null>(null);
