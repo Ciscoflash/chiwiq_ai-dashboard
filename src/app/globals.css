@@ -1,0 +1,91 @@
+@import url("https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600&display=swap");
+@import "tailwindcss";
+
+:root {
+  --background: #000000;
+  --foreground: #ffffff;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-dm-sans);
+  --font-mono: var(--font-space-mono);
+}
+
+@theme {
+  --color-surface: #0d0d0d;
+  --color-surface-subtle: rgba(255, 255, 255, 0.03);
+  --color-muted: rgba(255, 255, 255, 0.6);
+  --color-faint: rgba(255, 255, 255, 0.4);
+  --color-dim: rgba(255, 255, 255, 0.3);
+  --color-line: rgba(255, 255, 255, 0.15);
+  --color-line-strong: rgba(255, 255, 255, 0.2);
+  --color-accent: #00a425;
+  --color-lime-accent: #c3db27;
+  --font-clash: "Clash Display", ui-sans-serif, system-ui, sans-serif;
+  --animate-fade-up: fade-up 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+  --animate-fade-in: fade-in 0.25s ease-out both;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+::selection {
+  background: rgba(0, 164, 37, 0.35);
+  color: #ffffff;
+}
+
+select option {
+  background-color: #0d0d0d;
+  color: #f1f5f9;
+}
