@@ -49,6 +49,33 @@
   }
 }
 
+.gradient-text {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.1) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.footer-watermark {
+  position: relative;
+  height: clamp(60px, 18vw, 240px);
+  overflow: hidden;
+  margin-top: 16px;
+  user-select: none;
+  pointer-events: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+@media (min-width: 768px) {
+  .footer-watermark {
+    height: clamp(400px, 18vw, 240px);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

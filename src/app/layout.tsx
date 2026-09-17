@@ -20,8 +20,9 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "ChiwiQ | Admin",
-  description: "ChiwiQ booking management dashboard",
+  title: "ChiwiQ | Intelligent Operations Platform",
+  description:
+    "ChiwiQ builds intelligent operations platforms and AI agents for modern businesses.",
 };
 
 export default function RootLayout({

@@ -8,9 +8,9 @@ import { Wordmark } from "@/components/brand";
 import { cn, getInitials } from "@/lib/utils";
 
 const NAV_ITEMS = [
-  { href: "/dashboard", label: "Overview", icon: LayoutDashboard },
-  { href: "/dashboard/bookings", label: "Bookings", icon: CalendarDays },
-  { href: "/dashboard/profile", label: "Profile", icon: UserRound },
+  { href: "/admin/dashboard", label: "Overview", icon: LayoutDashboard },
+  { href: "/admin/dashboard/bookings", label: "Bookings", icon: CalendarDays },
+  { href: "/admin/dashboard/profile", label: "Profile", icon: UserRound },
 ];
 
 export function Sidebar() {
@@ -19,7 +19,7 @@ export function Sidebar() {
 
   return (
     <aside className="fixed inset-y-0 left-0 z-40 hidden w-64 flex-col border-r border-white/10 bg-black md:flex">
-      <Link href="/dashboard" className="flex items-center justify-between px-6 py-7">
+      <Link href="/admin/dashboard" className="flex items-center justify-between px-6 py-7">
         <Wordmark size="lg" />
         <span className="size-1.5 rounded-full bg-accent" />
       </Link>

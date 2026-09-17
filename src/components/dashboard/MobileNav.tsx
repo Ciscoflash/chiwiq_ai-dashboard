@@ -7,9 +7,9 @@ import { Wordmark } from "@/components/brand";
 import { cn } from "@/lib/utils";
 
 const NAV_ITEMS = [
-  { href: "/dashboard", label: "Overview", icon: LayoutDashboard },
-  { href: "/dashboard/bookings", label: "Bookings", icon: CalendarDays },
-  { href: "/dashboard/profile", label: "Profile", icon: UserRound },
+  { href: "/admin/dashboard", label: "Overview", icon: LayoutDashboard },
+  { href: "/admin/dashboard/bookings", label: "Bookings", icon: CalendarDays },
+  { href: "/admin/dashboard/profile", label: "Profile", icon: UserRound },
 ];
 
 export function MobileNav() {
@@ -17,7 +17,7 @@ export function MobileNav() {
 
   return (
     <div className="fixed inset-x-0 bottom-0 z-40 flex items-center justify-around gap-1 border-t border-white/10 bg-black/90 px-2 py-2 backdrop-blur md:hidden">
-      <Link href="/dashboard" className="mr-1 rounded-md px-2 py-1">
+      <Link href="/admin/dashboard" className="mr-1 rounded-md px-2 py-1">
         <Wordmark size="sm" />
       </Link>
       {NAV_ITEMS.map((item) => {
